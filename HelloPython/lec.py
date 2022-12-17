@@ -84,7 +84,7 @@
 list = [1, 4, 8, 7, 5]
 print(list)
 ind = 0
-if f[0] > f[1]:
-    print()
-else:
-    print()
+#if f[0] > f[1]:
+#    print()
+##else:
+#    print()

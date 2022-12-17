@@ -4,14 +4,40 @@
 #  - 5 -> нет
 # - 0,34 -> 3
 
-number = 5.99
-number = number*10
-print(number)
+#number = 5.99
+#number = number*10
+#print(number)
+
+#number = number%10
+#print(number)
+#number = int(number)
+#print(number)
+
+#if number == int(number):
+#    print('Целое')
+#else:
+#    print('Дробное')
+
+#number = input('Введите дробное число: ')
+#print(number)
+#number = number.split('.')
+#print(number[1][0])
 
 #Напишите программу, которая принимает на вход число и проверяет,
 #кратно ли оно 5 и 10 или 15, но не 30.
 
+#num = int(input('Введите целое число: '))
+
+#if (num%10 == 0 or num%15 == 0) and not num%30 == 0:
+#    print('Условие выполнено')
+#else:
+#    print('Условие не выполнено')
 
 #1. Напишите программу, которая принимает на вход число N и выдаёт последовательность из N членов.
 #   *Пример:*    
 #  - Для N = 5: 1, -3, 9, -27, 81
+
+number = int(input('Введите целое число N, где N - количество элементов в последовательности: '))
+for i in range(0, number):
+    num = (-3)**i
+    print(num)
