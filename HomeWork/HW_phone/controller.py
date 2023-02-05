@@ -3,23 +3,29 @@ import view
 
 
 def start():
-    choice = view.main_menu()
-    print(choice)
-
-    match choice:
-        case 1:
-            model.open_file()
-        case 2:
-            pass
-        case 3:
-            pass
-        case 4:
-            pass
-        case 5:
-            pass
-        case 6:
-            pass
-        case 7:
-            pass
-        case 8:
-            pass
+    choice = ''
+    while choice != 8:
+        choice = view.main_menu()
+        match choice:
+            case 1:
+                model.open_file()
+            case 2:
+                model.save_file
+            case 3:
+                pb = model.get_phone_book
+                view.show_contacts(pb)
+            #view.show_contacts(model.get_phone_book) - тоже самое, что и 2 предыдущих
+            case 4:
+                new_contact = list(view.create_new_contact())
+                model.add_new_contact(new_contact)
+            case 5:
+                pass
+            case 6:
+                pass
+            case 7:
+                find = view.find_contact()
+                result = model.search_contact(find)
+                view.show_contacts(result)
+            case _:
+                view.input_error()
+    

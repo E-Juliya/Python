@@ -15,3 +15,21 @@ def main_menu():
         print(f'\t{i}.{item}')
     choice = int(input('Выберите пункт меню: '))
     return choice
+
+def show_contacts(phone_list: list):
+    if len(phone_list) < 1:
+        print('Телефонная книга не открыта или пуста')
+    else:
+        print()
+        for i, contact in enumerate(phone_list, 1):
+            print(f'\t{i}. {contact[0]:20} {contact[1]:13} {contact[2]:20}')
+        print()
+
+def input_error():
+    print('Ошибка ввода. Введите корректный пункт меню')
+
+def create_new_contact():
+    name = input('Введите имя  и фамилию')
+    phone = input('Введите номер телефона')
+    comment = input('Введите комментарий')
+    return name, phone, comment 
