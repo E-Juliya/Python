@@ -9,7 +9,7 @@ commands = ['Открыть файл',
             'Найти контакт',
             'Выход из программы']
 
-def main_menu():
+def main_menu() -> int:
     print('Главное меню: ')
     for i, item in enumerate(commands, 1):
         print(f'\t{i}.{item}')
@@ -33,3 +33,8 @@ def create_new_contact():
     phone = input('Введите номер телефона')
     comment = input('Введите комментарий')
     return name, phone, comment 
+
+def find_contact():
+    find = input('Введите искомый элемент')
+    return find
+    

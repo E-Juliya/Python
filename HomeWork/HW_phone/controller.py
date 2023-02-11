@@ -10,7 +10,7 @@ def start():
             case 1:
                 model.open_file()
             case 2:
-                model.save_file
+                model.save_file()
             case 3:
                 pb = model.get_phone_book
                 view.show_contacts(pb)

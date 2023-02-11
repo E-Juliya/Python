@@ -25,7 +25,20 @@ def save_file():
         pb_str.append(';'.join(contact)) 
     with open(path, 'w', encoding='UTF-8') as data:
         data.write('\n'.join(pb_str))
+    message = 'Файл сохранён'
+    return message
     
+def delete_contact(id_contact: int):
+    global phone_book
+    phone_book.pop(id_contact - 1)
+    message = 'Контакт удалён'
+    return message
+
+def update_contact(changed_contact: list, id_contact: int):
+    global phone_book
+    for i, item in enumerate(changed_contact):
+        if item:
+            phone_book[id_contact - 1][i] - item
 
 def add_new_contact(new_contact: list):
     global phone_book
